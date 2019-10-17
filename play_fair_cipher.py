@@ -43,11 +43,6 @@ def _prepareKeyAndText(key: str, text: str):
     if len(c_arr)%2 == 1:
         c_arr.append("X")
     text = ''.join(c_arr)
-
-    ki = _indexOfStr(key, "I")
-    kj = _indexOfStr(key, "J")
-    if (kj > -1 and (kj < ki or ki == -1)):
-        return key.replace("I", "J"), text.replace("I", "J")
     return key.replace("J", "I"), text.replace("J", "I")
 
 def playFairEnc(text: str, key: str):
