@@ -1,5 +1,3 @@
-import numpy as np
-
 def caesarEnc(text, key):
     key = int(key)
     cipher = []
