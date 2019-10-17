@@ -52,7 +52,6 @@ def _prepareKeyAndText(key: str, text: str):
 
 def playFairEnc(text: str, key: str):
     key, text = _prepareKeyAndText(key, text)
-    print("Prepared Key: {}, Text: {}".format(key, text))
     m, charsMap = _createMatrix(key)
 
     c_arr = []
