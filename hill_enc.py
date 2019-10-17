@@ -16,6 +16,6 @@ def hillEnc(msg: str, key:list):
         tmpArr = [(ord(c)-65) for c in msg[i:i+n]]
         tmpNp = np.array(tmpArr).reshape(n, 1)
         resArr = np.remainder(mtx.dot(tmpNp), 26)
-        for rc in resArr:
+        for rc in np.nditer(resArr):
             c_arr.append(chr(65 + rc))
     return ''.join(c_arr)
